@@ -13,20 +13,4 @@ api.put('/project/:id', updateProjectById)
 
 api.delete('/project/:id', deleteProjectById)
 
-// api.use('/project/:id/task', async (req, res, next) => {
-//     if (req.method !== "GET") return next()
-
-//     if (!req.params.id) return res.status(500).send(`server error`);
-
-//     try {
-//         const data = await Project.find({ _id: mongoose.Types.ObjectId(req.params.id) }, { task: 1 })
-//         return res.send(data)
-//     } catch (error) {
-//         return res.send(error)
-//     }
-
-
-// })
-
-
 export default api
